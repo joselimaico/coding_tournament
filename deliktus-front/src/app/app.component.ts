@@ -6,6 +6,6 @@ import { } from '@types/googlemaps';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Deliktus';
+  title = 'Deliktum';
 
 }

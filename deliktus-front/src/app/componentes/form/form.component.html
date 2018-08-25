@@ -1,0 +1,45 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel> Selecciona  el lugar del incidente</ng-template>
+      <!--<mat-form-field>-->
+        <!--<input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>-->
+      <!--</mat-form-field>-->
+      <div>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Reporte</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="describe el delito" formControlName="secondCtrl" required>
+      </mat-form-field>
+
+      <button mat-raised-button >carga una imagen</button>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker1" placeholder="selecciona la fecha" [formControl]="date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <div>
+        <!--<button mat-button matStepperPrevious>Back</button>-->
+        <button mat-button >Reportar crimen</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Compartir</ng-template>
+    Reporte Finalizado
+    <div>
+
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

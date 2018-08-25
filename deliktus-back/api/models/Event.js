@@ -13,7 +13,6 @@ module.exports = {
     image:{type:'string',required:true},
     userReport:{
       model:'report',
-      unique: true
     }
 
   },
