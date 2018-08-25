@@ -12,6 +12,8 @@ import {MatFormFieldModule, MatNativeDateModule} from "@angular/material";
 import {MatInputModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {EventService} from "./Services/event.service";
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +36,12 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     NgbModule,
     MatStepperModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    EventService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

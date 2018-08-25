@@ -16,6 +16,9 @@
   <mat-step [stepControl]="secondFormGroup">
 
     <form [formGroup]="secondFormGroup">
+      <div class="button-row" *ngFor="let evento of eventos">
+        <button mat-fab color="primary">{{evento.name}}</button>
+      </div>
       <ng-template matStepLabel>Reporte</ng-template>
       <mat-form-field>
         <input matInput placeholder="describe el delito" formControlName="secondCtrl" required>
