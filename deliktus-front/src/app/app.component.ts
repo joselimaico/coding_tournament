@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import {Component,} from '@angular/core';
+import { } from '@types/googlemaps';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,14 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Deliktus';
-
-  lat: number = 51.678418;
-  lng: number = 7.809007;
-
-  onChooseLocation(event){
-    console.log(event);
-    this.lat = event.coords.lat;
-    this.lng = event.coords.lng;
-  }
 
 }
